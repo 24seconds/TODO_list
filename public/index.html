@@ -1,13 +1,53 @@
 <html>
 
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+    <h1>Express</h1>
+    <p>Welcome to Express test 3</p>
+    <button id="hw">CACULATE</button>
+
+    <div class="TODO_list">
+        <ul class="ul-list">
+            <li>
+                목록 아이템 1
+            </li>
+            <li>
+                목록 아이템 2
+            </li>
+            <li>목록 아이템 3</li>
+            <li>목록 아이템 4</li>
+            <li>목록 아이템 5</li>
+            <li>
+                <div class="notice-box">
+                    <div class="priority-layout">
+                        <div class="priority"></div>
+                    </div>
+                    <div class="memo-layout">
+                        <div class="metadata-layout">
+                            <div class="title-layout">
+                                <div>MEMOT TITLE</div>
+                            </div>
+                            <span id='close' onclick="this.parentNode.style.display = 'none';">&times;</span>
+                        </div>
+                        <div class="content-layout">
+                            <p>
+                                memo contents
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>목록 아이템 6</li>
+        </ul>
+    </div>
+
+
+
+    <script src="./javascripts/script.js"></script>
 </body>
 
 </html>
