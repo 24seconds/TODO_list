@@ -3,8 +3,16 @@
 window.onload = function(){
     var hw = document.getElementById('hw');    
     var close = document.getElementById('close');
-    var modal_close = document.getElementById('modal_close');
-    var append_modal = document.getElementById('append_modal');
+    var modal_close = document.getElementById('modal-close');
+    var append_modal = document.getElementById('append-modal');
+    var priorities = document.getElementsByClassName('w3-bar-item');
+
+    for(let i=0; i < priorities.length; i++)
+    {
+        priorities[i].addEventListener("click", function(){
+            change_modal_priority_color(i);
+        });
+    }
     // var modal_button = document.getElementById('modal_button');
     // var lists = $('#list'); // id가 'my-box'인 객체 찾기
     hw.addEventListener('click', delay);
@@ -17,6 +25,18 @@ window.onload = function(){
     {
         Notification.requestPermission();
     }
+}
+
+function change_modal_priority_color(priority_index){
+    var modal_priority_button = document.getElementById("modal-priority-button");
+    let colorArray = [ "#f44336", "#ffc107", "#4CAF50"]; // w3-red, w3-amber, w3-green
+    console.log("change modal priority color"+priority_index);
+    if(modal_priority_button.style.backgroundColor === "")
+    {
+        console.log("color null");
+    }
+    console.log(modal_priority_button.style.backgroundColor);
+    modal_priority_button.style.backgroundColor = colorArray[priority_index];
 }
 
 function show_modal(){

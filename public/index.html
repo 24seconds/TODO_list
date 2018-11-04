@@ -11,13 +11,13 @@
     <p>Welcome to Express test 3</p>
     <button id="hw">CACULATE</button>
     <button id="append">APPEND</button>
-    <button id="append_modal" class="w3-button w3-white">ADD TODO</button>
+    <button id="append-modal" class="w3-button w3-white">ADD TODO</button>
 
     <div class="w3-container">
         <div id="id01" class="w3-modal">
             <div class="w3-modal-content w3-card-4">
                 <header class="w3-container w3-teal">
-                    <span id='modal_close' class="w3-button w3-display-topright">&times;</span>
+                    <span id='modal-close' class="w3-button w3-display-topright">&times;</span>
                     <h2>TODO LIST</h2>
                 </header>
                 <div class="w3-container">
@@ -26,10 +26,20 @@
                     <input class="w3-input w3-border w3-margin-bottom" id="memoDate" type="date" name="memo1" required>
                 </div>
                 <footer class="w3-container w3-teal">
-                    <p>Memo</p>
+                    <p>MEMO</p>
                 </footer>
                 <input class="w3-input w3-border w3-margin-bottom" id="memoContent" type="text" placeholder="Enter contents"
                     name="memo2" required>
+                <div class="w3-container">
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button" id="modal-priority-button">PRIORITY</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border">
+                            <div id="urgent" class="w3-bar-item w3-button w3-red">URGENT</div>
+                            <div id="normal" class="w3-bar-item w3-button w3-amber">NORMAL</div>
+                            <div id="minor" class="w3-bar-item w3-button w3-green">MINOR</div>
+                        </div>
+                    </div>
+                </div>
                 <button class="w3-button w3-block w3-green w3-section w3-padding" id="modal_button" type="submit">ADD</button>
             </div>
         </div>
