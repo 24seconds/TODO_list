@@ -11,8 +11,8 @@ a {
     overflow:scroll;
     width: 50%;
     height: 400px;
-    border: 2px solid #09c;
-    background-color: #d7f5ff;
+    border: 2px solid rgb(65, 112, 128);
+    /* background-color: #fffffff8; */
 
 }
 
@@ -29,8 +29,8 @@ ul.ul-list li
 {
     padding: 5px 0px 5px 5px;
     margin-bottom: 5px;
-    border-bottom: 1px solid #0c0c0c;
-    border-top: 3px solid #580f0f;
+    /* border-bottom: 1px solid #0c0c0c; */
+    /* border-top: 3px solid #580f0f; */
     font-size: 12px;  /* font-size는 child한테 따로 해줘야할건데 */
 }
 
@@ -49,29 +49,32 @@ ul.ul-list li:before
 .notice-box {
     display:flex;
     flex-direction: row;
-    padding:5px;
-    background-color:rgb(125, 153, 207);
-    text-align:left; margin-top: 5px;
+    padding:2px;
+    /* background-color:rgb(125, 153, 207); */
+    border: 1px solid #222024;
+    text-align:left; margin-top: 2px;
+    /* background-color:rgb(29, 34, 46); */
 }
 
 .notice-box .priority-layout{
     display:flex;
     justify-content: center;
     width:30px;
-    height: 60px;
-    background-color: #b7dab7;
+    height: 20px;
+    /* background-color: #b7dab7; */
 }
 
 .notice-box .priority {
     display:flex;
     /* justify-content: center; */
     align-self: center;
-    width:20px;
-    height:20px;
-    border:1pt solid #222024;
+    width:17px;
+    height:17px;
+    padding: 3px;
+    border:1pt solid #22202491;
     border-radius:50%;
     filter:alpha(opacity=30);
-    opacity:0.3;
+    /* opacity:0.3; */
     /* background:""; */
 }
 
@@ -97,26 +100,40 @@ ul.ul-list li:before
     width: 100%;
 }
 
+.notice-box .memo-layout:hover{
+    border: 0;
+    cursor:pointer;
+    opacity: .75;
+}
+
 .notice-box .metadata-layout{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    border-bottom: 2px solid #4b4949;
 }
 
 .notice-box .title-layout{
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 94%;
-    background-color: #ff0000;
+    font-size: 15px;
+    padding-left: 4px;
+    /* background-color: #ff0000; */
 }
 
 .notice-box .content-layout{
+    width: 100%;
     display: flex;
-    background-color: #8b6f6f;
+    align-items: center;
+    padding-left: 5px;
+    background-color: #836e6e71;
 }
 
 #close {
     width: 6%;
-    background-color: #ecca08;
+    /* background-color: #ecca08; */
     /* padding:1px 1px; */
     font-weight: 700;
     text-shadow: 0 1px 0 #fff;
@@ -127,5 +144,5 @@ ul.ul-list li:before
     border: 0;
     cursor:pointer;
     opacity: .75;
-    background-color: rgb(252, 7, 7);
+    /* background-color: rgb(252, 7, 7); */
 }

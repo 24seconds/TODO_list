@@ -36,6 +36,12 @@ $(function(){
         $(this).parent().parent().parent().parent().remove();
     })
 
+    $("#list").on("click",".memo-layout", function(){
+        $(this).children('.metadata-layout').children('.title-layout').children('div').wrap("<strike>");
+        $(this).children('.content-layout').children('p').wrap("<strike>");
+        $(this).children('.metadata-layout').children('.title-layout').css("background-color","#6e6e64");
+    })
+
     // $("#list").on("click", ".btnDel", function(){
     //     $(this).parent().parent().remove();
     // });
