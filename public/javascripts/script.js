@@ -4,17 +4,23 @@ window.onload = function(){
     var hw = document.getElementById('hw');    
     var close = document.getElementById('close');
     var modal_close = document.getElementById('modal_close');
+    var append_modal = document.getElementById('append_modal');
     // var modal_button = document.getElementById('modal_button');
     // var lists = $('#list'); // id가 'my-box'인 객체 찾기
     hw.addEventListener('click', delay);
     close.addEventListener('click', hide);
     modal_close.addEventListener('click',hide_modal);
+    append_modal.addEventListener('click', show_modal);
     // modal_button.addEventListener('click',pickDate);
 
     if(Notification)
     {
         Notification.requestPermission();
     }
+}
+
+function show_modal(){
+    document.getElementById('id01').style.display='block';
 }
 
 function hide_modal(){
@@ -33,7 +39,7 @@ function delay(){
 }
 
 function hide(){
-    // var notice_box = document.getElementById('test');
+    var notice_box = document.getElementById('test');
     notice_box.style.display = 'none';
     // this.parentNode.parentNode.parentNode.style.display = 'none'
 }
