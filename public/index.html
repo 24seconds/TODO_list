@@ -2,6 +2,7 @@
 
 <head>
     <title>Express</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -9,9 +10,33 @@
     <h1>Express</h1>
     <p>Welcome to Express test 3</p>
     <button id="hw">CACULATE</button>
+    <button id="append">APPEND</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-white">ADD TODO</button>
+
+    <div class="w3-container">
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <span id='modal_close' class="w3-button w3-display-topright">&times;</span>
+                    <h2>TODO LIST</h2>
+                </header>
+                <div class="w3-container">
+                    <input class="w3-input w3-border w3-margin-bottom" id="memoTitle" type="text" placeholder="Enter Title"
+                        name="memo0" required>
+                    <input class="w3-input w3-border w3-margin-bottom" id="memoDate" type="date" name="memo1" required>
+                </div>
+                <footer class="w3-container w3-teal">
+                    <p>Memo</p>
+                </footer>
+                <input class="w3-input w3-border w3-margin-bottom" id="memoContent" type="text" placeholder="Enter contents"
+                    name="memo2" required>
+                <button class="w3-button w3-block w3-green w3-section w3-padding" id="modal_button" type="submit">ADD</button>
+            </div>
+        </div>
+    </div>
 
     <div class="TODO_list">
-        <ul class="ul-list">
+        <ul class="ul-list" , id="list">
             <li>
                 목록 아이템 1
             </li>
@@ -22,7 +47,7 @@
             <li>목록 아이템 4</li>
             <li>목록 아이템 5</li>
             <li>
-                <div class="notice-box">
+                <div class="notice-box" , id="test">
                     <div class="priority-layout">
                         <div class="priority"></div>
                     </div>
@@ -31,7 +56,8 @@
                             <div class="title-layout">
                                 <div>MEMOT TITLE</div>
                             </div>
-                            <span id='close' onclick="this.parentNode.style.display = 'none';">&times;</span>
+                            <span id='close'>&times;</span>
+                            <!-- &times; == x button -->
                         </div>
                         <div class="content-layout">
                             <p>
@@ -45,9 +71,9 @@
         </ul>
     </div>
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="./javascripts/script.js"></script>
+    <script src="./javascripts/list_manage.js"></script>
 </body>
 
 </html>
