@@ -8,10 +8,12 @@ a {
 }
 
 .TODO_list{
+    overflow:scroll;
     width: 50%;
     height: 400px;
     border: 2px solid #09c;
     background-color: #d7f5ff;
+
 }
 
 
@@ -47,7 +49,7 @@ ul.ul-list li:before
 .notice-box {
     display:flex;
     flex-direction: row;
-    padding:10px;
+    padding:5px;
     background-color:rgb(125, 153, 207);
     text-align:left; margin-top: 5px;
 }
@@ -57,20 +59,36 @@ ul.ul-list li:before
     justify-content: center;
     width:30px;
     height: 60px;
-    background-color: #19e419;
+    background-color: #b7dab7;
 }
 
 .notice-box .priority {
     display:flex;
     /* justify-content: center; */
     align-self: center;
-    width:10px;
-    height:10px;
-    border:1pt solid #440088;
+    width:20px;
+    height:20px;
+    border:1pt solid #222024;
     border-radius:50%;
     filter:alpha(opacity=30);
     opacity:0.3;
-    background:#bbff88;
+    /* background:""; */
+}
+
+#priority-color0{
+    background-color: #f44336;
+}
+
+#priority-color1{
+    background-color: #ffc107;
+}
+
+#priority-color2{
+    background-color: #4CAF50;
+}
+
+#priority-color3{
+    background-color: "";
 }
 
 .notice-box .memo-layout{
