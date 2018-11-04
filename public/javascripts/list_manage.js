@@ -33,7 +33,7 @@ $(function(){
     });
 
     $("#list").on("click", "#close", function(){
-        $(this).parent().parent().parent().remove();
+        $(this).parent().parent().parent().parent().remove();
     })
 
     // $("#list").on("click", ".btnDel", function(){
