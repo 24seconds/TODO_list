@@ -20,17 +20,15 @@ $(function(){
 
 $(function(){
     $("#modal_button").click(function(){
-        var memoTitle = $("#memoTitle").val();
-        var date = $("#memoDate").val();
-        var memoContent = $("#memoContent").val();
+        var memoTitle = $("#memoTitle");
+        var date = $("#memoDate");
+        var memoContent = $("#memoContent");
         var priority_buton = $("#modal-priority-button");
-        var priority = priority_buton.css("background-color");
-        console.log(memoTitle);
-        console.log(date);
-        console.log(memoContent);
-        console.log(priority);
+        console.log(memoTitle.val());
+        console.log(date.val());
+        console.log(memoContent.val());
+        console.log(priority_buton.css("background-color"));
         $("#id01").css("display","none");
-        priority_buton.css("background-color", "");
         
         // alert("hi there~");
         // var html = '<li> added items 3</li>';
@@ -38,7 +36,12 @@ $(function(){
         // console.log(test);
 
         // $("#list").append(html);
-        
+
+        memoTitle.val('');
+        date.val('');
+        memoContent.val('');
+        priority_buton.css("background-color", "");
+
     });
 
     // $("#list").on("click", ".btnDel", function(){
