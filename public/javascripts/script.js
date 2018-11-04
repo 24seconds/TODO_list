@@ -1,8 +1,7 @@
 // http://52.79.56.206:3000
 
 window.onload = function(){
-    var hw = document.getElementById('hw');    
-    var close = document.getElementById('close');
+    var hw = document.getElementById('hw');
     var modal_close = document.getElementById('modal-close');
     var append_modal = document.getElementById('append-modal');
     var priorities = document.getElementsByClassName('w3-bar-item');
@@ -16,7 +15,6 @@ window.onload = function(){
     // var modal_button = document.getElementById('modal_button');
     // var lists = $('#list'); // id가 'my-box'인 객체 찾기
     hw.addEventListener('click', delay);
-    close.addEventListener('click', hide);
     modal_close.addEventListener('click',hide_modal);
     append_modal.addEventListener('click', show_modal);
     // modal_button.addEventListener('click',pickDate);
@@ -56,12 +54,6 @@ function delay(){
     setTimeout(function(){
         notify();
     }, 3000);
-}
-
-function hide(){
-    var notice_box = document.getElementById('test');
-    notice_box.style.display = 'none';
-    // this.parentNode.parentNode.parentNode.style.display = 'none'
 }
 
 function notify(){
