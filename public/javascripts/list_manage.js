@@ -44,11 +44,35 @@ $(function () {
         $(this).parent().parent().parent().parent().remove();
     })
 
-    $("#list").on("click", ".memo-layout", function () {
-        $(this).children('.metadata-layout').children('.title-layout').children('div').wrap("<strike>");
-        $(this).children('.content-layout').children('p').wrap("<strike>");
-        $(this).children('.metadata-layout').children('.title-layout').css("background-color", "#6e6e64");
+    // $("#list").on("click", ".memo-layout", function () {
+    //     console.log("mouse click");
+    //     $(this).children('.metadata-layout').children('.title-layout').children('div').wrap("<strike>");
+    //     $(this).children('.content-layout').children('p').wrap("<strike>");
+    //     $(this).children('.metadata-layout').children('.title-layout').css("background-color", "#6e6e64");
+    // })
+
+    var isDragging = false;
+
+    $("#list").on("mousedown", ".memo-layout", function(){
+        isDragging = false;
     })
+    $("#list").on("mousemove", ".memo-layout", function(){
+        isDragging = true;
+    })
+    $("#list").on("mouseup", ".memo-layout", function(){
+        var wasDragging = isDragging;
+        isDragging = false;
+        if(!wasDragging)
+        {
+            $(this).children('.metadata-layout').children('.title-layout').children('div').wrap("<strike>");
+            $(this).children('.content-layout').children('p').wrap("<strike>");
+            $(this).children('.metadata-layout').children('.title-layout').css("background-color", "#6e6e64");
+        }
+    })
+
+    $("#list").sortable();
+    $("#list").disableSelection();
+
 
     // $("#list").on("click", ".btnDel", function(){
     //     $(this).parent().parent().remove();
