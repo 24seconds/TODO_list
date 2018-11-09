@@ -62,7 +62,7 @@ $(function () {
     $("#list").on("mouseup", ".memo-layout", function(){
         var wasDragging = isDragging;
         isDragging = false;
-        if(!wasDragging)
+        if(!wasDragging) // click, not drag
         {
             $(this).children('.metadata-layout').children('.title-layout').children('div').wrap("<strike>");
             $(this).children('.content-layout').children('p').wrap("<strike>");
