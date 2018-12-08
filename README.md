@@ -1,5 +1,4 @@
 ## TODO list
-### server is running on http://13.125.217.230:8080/
 
 HTML + EXPRESS, aws server를 하나 할당하여 돌아가고 있는 상황입니다.
 
